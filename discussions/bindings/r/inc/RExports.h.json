@@ -20,5 +20,27 @@
     "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
     "line" : 8,
     "diffHunk" : "@@ -1,1 +56,60 @@#define R_Version(v,p,s) ((v * 65536) + (p * 256) + (s))\n#endif\n\n#include<RcppCommon.h>\nnamespace ROOT {"
+  },
+  {
+    "id" : "e7d69370-da24-4273-9954-2e401cf66177",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e42f8deb-e1a3-40d7-8929-f54c4e8d6801",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#if !defined(R_Version)\n#define R_Version(v, p, s) ((v * 65536) + (p * 256) + (s))\n#endif\n\n```",
+        "createdAt" : "2021-04-08T12:22:17Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +56,60 @@#define R_Version(v,p,s) ((v * 65536) + (p * 256) + (s))\n#endif\n\n#include<RcppCommon.h>\nnamespace ROOT {"
   }
 ]

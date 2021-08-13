@@ -438,5 +438,269 @@
     "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
     "line" : 551,
     "diffHunk" : "@@ -1,1 +758,762 @@                SplitPaths(Command.Ptr + rpathCmd.path, RPath, utils::kAllowNonExistant, platform::kEnvDelim, false);\n              }\n            }\n          } else if (BinObjF->isCOFF()) {\n            // TODO: COFF support"
+  },
+  {
+    "id" : "aeb69f9e-74c8-4f20-8df4-dbbf13cb6e17",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "02f3adfd-5e92-4726-a523-04b67eae55e9",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#include \"llvm/BinaryFormat/MachO.h\"\n```",
+        "createdAt" : "2021-04-08T12:22:20Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +18,22 @@#include \"llvm/ADT/StringRef.h\"\n#include \"llvm/ADT/StringMap.h\"\n#include \"llvm/BinaryFormat/MachO.h\"\n#include \"llvm/Object/COFF.h\"\n#include \"llvm/Object/ELF.h\""
+  },
+  {
+    "id" : "4f28b8a2-b823-412d-97f6-cf21583d2f07",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7b6c078d-bef0-4e2d-88a8-a006e23edb16",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#include \"llvm/Object/ELF.h\"\n```",
+        "createdAt" : "2021-04-08T12:22:20Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +20,24 @@#include \"llvm/BinaryFormat/MachO.h\"\n#include \"llvm/Object/COFF.h\"\n#include \"llvm/Object/ELF.h\"\n#include \"llvm/Object/ELFObjectFile.h\"\n#include \"llvm/Object/MachO.h\""
+  },
+  {
+    "id" : "6ad20ed0-117f-4c13-b9a3-df266e2ea1ee",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "69ed691d-8d2e-407a-abcf-d2e73f86556e",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#include \"llvm/Object/MachO.h\"\n```",
+        "createdAt" : "2021-04-08T12:22:20Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +22,26 @@#include \"llvm/Object/ELF.h\"\n#include \"llvm/Object/ELFObjectFile.h\"\n#include \"llvm/Object/MachO.h\"\n#include \"llvm/Object/ObjectFile.h\"\n#include \"llvm/Support/DynamicLibrary.h\""
+  },
+  {
+    "id" : "10b78ab8-7ea6-4e0a-8b1c-2b99ba205aee",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d708b330-92fa-4efc-b781-9011cf07ef88",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#include \"llvm/Support/Error.h\"\n```",
+        "createdAt" : "2021-04-08T12:22:20Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +25,29 @@#include \"llvm/Object/ObjectFile.h\"\n#include \"llvm/Support/DynamicLibrary.h\"\n#include \"llvm/Support/Error.h\"\n#include \"llvm/Support/Path.h\"\n#include \"llvm/Support/Program.h\""
+  },
+  {
+    "id" : "96906568-8f33-4514-9c2f-a5c5c8a3a932",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f964b90c-82af-445a-a215-e2738435180d",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n#include \"llvm/Support/Path.h\"\n#include \"llvm/Support/Program.h\"\n#include \"llvm/Support/WithColor.h\"\n```",
+        "createdAt" : "2021-04-08T12:22:20Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +29,33 @@#include \"llvm/Support/Program.h\"\n#include \"llvm/Support/Format.h\"\n#include \"llvm/Support/WithColor.h\"\n\n#include <algorithm>"
+  },
+  {
+    "id" : "c8a9beff-cc21-4895-9260-a5f626f8616a",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "db00e8b8-1620-4060-bcea-b44be656b238",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n                                    uint32_t hash) {\n```",
+        "createdAt" : "2021-04-08T12:22:21Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 286,
+    "diffHunk" : "@@ -1,1 +439,443 @@///\\returns true if the symbol may be in the library.\nstatic bool MayExistInElfObjectFile(llvm::object::ObjectFile *soFile,\n                                    uint32_t hash) {\n  assert(soFile->isELF() && \"Not ELF\");\n"
+  },
+  {
+    "id" : "1586417e-28b1-49fe-8975-93e48eeda36d",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-631325128",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f8c0d1da-9169-47ab-a6cd-8ba3206ceabb",
+        "parentId" : null,
+        "authorId" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "body" : "```suggestion\n  void Dyld::ScanForLibraries(bool searchSystemLibraries /* = false*/) {\n```",
+        "createdAt" : "2021-04-08T12:22:22Z",
+        "updatedAt" : "2021-04-09T20:16:43Z",
+        "lastEditedBy" : "b73772e3-d2b0-4973-98e0-56c892ef3e26",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 391,
+    "diffHunk" : "@@ -1,1 +620,624 @@  }\n\n  void Dyld::ScanForLibraries(bool searchSystemLibraries/* = false*/) {\n\n    const auto &searchPaths = m_DynamicLibraryManager.getSearchPaths();"
+  },
+  {
+    "id" : "0a0c17a3-1a16-45d7-a68d-a4e16c56bb4e",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-652192700",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8c955ef7-a7cf-4e70-95fc-99b5adc71afa",
+        "parentId" : null,
+        "authorId" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "body" : "We shouldn't be looking at non-process ABI: if this process is 64bit, only look at 64bit ELF; if it's 32 only look at 32bit ELF. Same for endianness. Or what am I missing?",
+        "createdAt" : "2021-04-22T13:49:39Z",
+        "updatedAt" : "2021-04-22T13:52:03Z",
+        "lastEditedBy" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a37dc9b4-3f83-4856-9e45-61b29eb85856",
+        "parentId" : "8c955ef7-a7cf-4e70-95fc-99b5adc71afa",
+        "authorId" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "body" : "We already seem to have that filtered by https://github.com/vgvassilev/cling/blob/f3768a4c43b0f3b23eccc6075fa178861a002a10/lib/Interpreter/DynamicLibraryManagerSymbol.cpp#L730-L731",
+        "createdAt" : "2021-05-05T11:25:56Z",
+        "updatedAt" : "2021-05-05T11:25:56Z",
+        "lastEditedBy" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 532,
+    "diffHunk" : "@@ -1,1 +739,743 @@              HandleDynTab(ELF->getELFFile(), FileName, RPath, RunPath, Deps);\n            else if (const auto* ELF = dyn_cast<ELF64BEObjectFile>(BinObjF))\n              HandleDynTab(ELF->getELFFile(), FileName, RPath, RunPath, Deps);\n\n          } else if (BinObjF->isMachO()) {"
+  },
+  {
+    "id" : "f45f39d4-0641-4e4e-97ea-5dd03483013b",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-704784193",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "parentId" : null,
+        "authorId" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "body" : "What about COFF? `DLL`s also have that info.",
+        "createdAt" : "2021-05-05T15:00:56Z",
+        "updatedAt" : "2021-05-05T15:00:56Z",
+        "lastEditedBy" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d1d226cb-97ae-45be-8461-20aefa36cc77",
+        "parentId" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "authorId" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "body" : "Can you point us to where you found that information? We do not seem to have access to `rpath` & co in the `COFFObjectFile`.",
+        "createdAt" : "2021-05-20T07:56:44Z",
+        "updatedAt" : "2021-05-20T07:56:45Z",
+        "lastEditedBy" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "eb6fe0ae-b838-4caf-a8c0-cfecd1e7d665",
+        "parentId" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "authorId" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "body" : "With \"that info\" I meant the library dependencies which you collect for ELF as `DT_NEEDED`. IIUC an example for COFF is [here](https://github.com/llvm/llvm-project/blob/1128311a19179ceca799ff0fbc4dd206ab56e560/llvm/tools/llvm-objdump/COFFDump.cpp#L350)",
+        "createdAt" : "2021-05-20T10:20:22Z",
+        "updatedAt" : "2021-05-20T10:20:22Z",
+        "lastEditedBy" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4aa5e14f-b4e6-48aa-92f4-20adabe7d415",
+        "parentId" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "authorId" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "body" : "This pull request fixes a particular issue which in essence is a deployment technique on the unix platforms. I am hesitant adding such logic for COFF as I am not sure if that is relevant to that problem but also I am not sure what is the behavior of their dynamic linker. I'd pursue the approach from the past -- we will add the windows support if we need it in future.",
+        "createdAt" : "2021-05-21T06:31:05Z",
+        "updatedAt" : "2021-05-21T06:31:05Z",
+        "lastEditedBy" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3e611a2-fa8d-4df8-9811-1e752989d95f",
+        "parentId" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "authorId" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "body" : "We *will* need the `DT_NEEDED` replacement for COFF to make ACLiC work when loading ACLiC libraries, without searching for libraries that can resolve unresolved symbols. I'm okay if this is addressed in a subsequent PR, but without that we cannot progress with https://github.com/root-project/root/issues/7774\r\n\r\nhttps://github.com/root-project/root/pull/8017 is intentionally excluding this case knowing that `DT_NEEDED` support would come.",
+        "createdAt" : "2021-05-21T12:58:55Z",
+        "updatedAt" : "2021-05-21T12:59:53Z",
+        "lastEditedBy" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "978fb7ab-016a-432c-b350-4d83472fa108",
+        "parentId" : "34545423-38b1-46c5-8294-ee0d7033a46d",
+        "authorId" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "body" : "Let's do that, as we agreed, in another PR if required.",
+        "createdAt" : "2021-07-13T06:19:08Z",
+        "updatedAt" : "2021-07-13T06:19:09Z",
+        "lastEditedBy" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 551,
+    "diffHunk" : "@@ -1,1 +758,762 @@                SplitPaths(Command.Ptr + rpathCmd.path, RPath, utils::kAllowNonExistant, platform::kEnvDelim, false);\n              }\n            }\n          } else if (BinObjF->isCOFF()) {\n            // TODO: COFF support"
   }
 ]

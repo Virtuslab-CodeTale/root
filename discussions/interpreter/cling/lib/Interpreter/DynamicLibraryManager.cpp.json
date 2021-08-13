@@ -64,5 +64,38 @@
     "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
     "line" : 69,
     "diffHunk" : "@@ -1,1 +102,106 @@      loaderPath = libLoader.str();\n      llvm::sys::path::remove_filename(loaderPath);\n    }\n\n    result = substFront(original, \"@executable_path\", mainExecutablePath);"
+  },
+  {
+    "id" : "b1378944-d53b-4efb-8a59-1835158fce5b",
+    "prId" : 6969,
+    "prUrl" : "https://github.com/root-project/root/pull/6969#pullrequestreview-691796600",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "72b31f9d-260f-4e38-9501-986c9644002b",
+        "parentId" : null,
+        "authorId" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "body" : "Isn't this equivalent and less CPU and simpler logic?\r\n```suggestion\r\n    llvm::SmallString<512> loaderPath;\r\n    if (libLoader.empty()) {\r\n      loaderPath = llvm::sys::fs::getMainExecutable(nullptr, nullptr);\r\n    } else {\r\n      loaderPath = libLoader.str();\r\n    }\r\n    llvm::sys::path::remove_filename(loaderPath);\r\n```",
+        "createdAt" : "2021-05-20T10:29:45Z",
+        "updatedAt" : "2021-05-20T10:42:59Z",
+        "lastEditedBy" : "09b7e073-cbeb-42e8-aa22-8b1468de56ae",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e443412-e601-4343-b200-2248ea0bdc01",
+        "parentId" : "72b31f9d-260f-4e38-9501-986c9644002b",
+        "authorId" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "body" : "We use the `mainExecutablePath` below.",
+        "createdAt" : "2021-06-24T14:04:50Z",
+        "updatedAt" : "2021-06-24T14:04:50Z",
+        "lastEditedBy" : "6f6f52c8-bace-4788-98aa-f12fb2560025",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ca11bbe5c9b3c482ebe8f445dae0fdd772d53896",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +102,106 @@      loaderPath = libLoader.str();\n      llvm::sys::path::remove_filename(loaderPath);\n    }\n\n    result = substFront(original, \"@executable_path\", mainExecutablePath);"
   }
 ]
