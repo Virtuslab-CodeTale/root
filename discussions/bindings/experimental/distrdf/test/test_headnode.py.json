@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "da4298b2-a353-47a4-a968-553f36a8993f",
+    "prId" : 8816,
+    "prUrl" : "https://github.com/root-project/root/pull/8816#pullrequestreview-725203002",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "8f1f84a7-a8e3-4daa-9a9f-12b350c1c771",
+        "parentId" : null,
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "what are you testing here? ",
+        "createdAt" : "2021-08-09T09:36:37Z",
+        "updatedAt" : "2021-08-09T09:37:18Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "11bf5e11-1e00-47ad-88a9-0af5ae39e2d0",
+        "parentId" : "8f1f84a7-a8e3-4daa-9a9f-12b350c1c771",
+        "authorId" : "82ce2c80-31ff-4f7b-91f0-fff78777d7f9",
+        "body" : "This and the above tests in class `NumEntriesTest` were previously testing that the method `get_num_entries` of `TreeHeadNode` was returning the correct amount. Now, they test that the attribute `tree` of the class is the correct TTree/TChain that we expect by retrieving the number of entries. ",
+        "createdAt" : "2021-08-09T09:52:33Z",
+        "updatedAt" : "2021-08-09T09:52:33Z",
+        "lastEditedBy" : "82ce2c80-31ff-4f7b-91f0-fff78777d7f9",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9cbf737d-acf1-45a2-b028-d9ee8d99b674",
+        "parentId" : "8f1f84a7-a8e3-4daa-9a9f-12b350c1c771",
+        "authorId" : "82ce2c80-31ff-4f7b-91f0-fff78777d7f9",
+        "body" : "I may agree that it's not a super useful test, but I didn't want to remove it as a first step",
+        "createdAt" : "2021-08-09T09:53:37Z",
+        "updatedAt" : "2021-08-09T09:53:37Z",
+        "lastEditedBy" : "82ce2c80-31ff-4f7b-91f0-fff78777d7f9",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8c64c8ac0e215db517f88e89a2d995e57855917d",
+    "line" : 119,
+    "diffHunk" : "@@ -1,1 +230,234 @@        hn = create_dummy_headnode(tree)\n\n        self.assertEqual(hn.tree.GetEntries(), 4)\n\n        f.Close()"
+  }
+]

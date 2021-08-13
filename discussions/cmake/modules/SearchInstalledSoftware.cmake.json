@@ -856,5 +856,27 @@
     "commit" : "d297824a2b0871851b8eedb77328c0d5fa96ab6c",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +494,498 @@#---Check for GSL library---------------------------------------------------------------\nif(mathmore OR builtin_gsl)\n  if(builtin_gsl AND NO_CONNECTION)\n    if(fail-on-missing)\n      message(FATAL_ERROR \"No internet connection. Please check your connection, or either disable the 'builtin_gsl' option or the 'fail-on-missing' to automatically disable options requiring internet access\")"
+  },
+  {
+    "id" : "a4446a12-fc92-489c-8265-1291cd399726",
+    "prId" : 8832,
+    "prUrl" : "https://github.com/root-project/root/pull/8832#pullrequestreview-727445361",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ccbef9a5-669c-4ec5-a58b-9f228658cecb",
+        "parentId" : null,
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "```suggestion\r\n    # this is a workaround to silence some cmake warnings coming from FindArrow.cmake when it\r\n    # looks for transitive dependencies, see also https://issues.apache.org/jira/browse/ARROW-11890\r\n    if(\"${ARGV0}\" MATCHES \"c-ares\" OR \"${ARGV0}\" MATCHES \"re2\")\r\n```",
+        "createdAt" : "2021-08-11T12:53:38Z",
+        "updatedAt" : "2021-08-11T12:56:57Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1a76daef232ef41da2585f59e13c05472a50d4b9",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +17,21 @@    # this is a workaround to silence some cmake warnings coming from FindArrow.cmake when it\n    # looks for transitive dependencies, see also https://issues.apache.org/jira/browse/ARROW-11890\n    if(\"${ARGV0}\" MATCHES \"c-ares\" OR \"${ARGV0}\" MATCHES \"re2\")\n      _find_package(${ARGV} QUIET)\n    else()"
   }
 ]

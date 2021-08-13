@@ -42,5 +42,71 @@
     "commit" : "df38efc8938c8722b7e15683f0a07731d6f75b61",
     "line" : 3,
     "diffHunk" : "@@ -1,1 +223,227 @@  }\n\n  // Create RooDataHist\n  auto hname = std::string(self.GetName()) + \"_\" + self.inputBaseName() + \"_CACHEHIST\"\n               + self.cacheNameSuffix(orderedObs).Data() + self.histNameSuffix().Data();"
+  },
+  {
+    "id" : "4c8eed8f-f3cf-492a-b909-1eab2598eba4",
+    "prId" : 8835,
+    "prUrl" : "https://github.com/root-project/root/pull/8835#pullrequestreview-728775013",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "231db54b-8010-4fa8-a195-69a13f94a26f",
+        "parentId" : null,
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "maybe\r\n\r\n```suggestion\r\n  name += ']';\r\n```",
+        "createdAt" : "2021-08-12T15:24:36Z",
+        "updatedAt" : "2021-08-12T15:25:15Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bab7cec9-e591-4954-8f87-34e53ffe7485",
+        "parentId" : "231db54b-8010-4fa8-a195-69a13f94a26f",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Okay! I'll update.",
+        "createdAt" : "2021-08-12T15:31:48Z",
+        "updatedAt" : "2021-08-12T15:31:48Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7c2ce3735c4aac1d2692a6883c9aac0c94f777b9",
+    "line" : 289,
+    "diffHunk" : "@@ -1,1 +260,264 @@  }\n\n  name += \"]\";\n  if (const char* payloadUS = payloadUniqueSuffix()) {\n    name += payloadUS;"
+  },
+  {
+    "id" : "ddd6e65c-30a2-46b0-8921-fb24d13298bf",
+    "prId" : 8835,
+    "prUrl" : "https://github.com/root-project/root/pull/8835#pullrequestreview-728775088",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "66ed1c85-d528-469a-83fe-89c548e814fe",
+        "parentId" : null,
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "maybe consider\r\n```suggestion\r\n        name += ',';\r\n```",
+        "createdAt" : "2021-08-12T15:25:03Z",
+        "updatedAt" : "2021-08-12T15:25:15Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "19454ed8-c4b2-43c2-9c18-f31ba9495ec1",
+        "parentId" : "66ed1c85-d528-469a-83fe-89c548e814fe",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Okay! I'll update.",
+        "createdAt" : "2021-08-12T15:31:52Z",
+        "updatedAt" : "2021-08-12T15:31:52Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7c2ce3735c4aac1d2692a6883c9aac0c94f777b9",
+    "line" : 277,
+    "diffHunk" : "@@ -1,1 +254,258 @@        first=false ;\n      } else {\n        name += \",\";\n      }\n      name += arg->GetName();"
   }
 ]

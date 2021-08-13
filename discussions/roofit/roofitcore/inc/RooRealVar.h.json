@@ -20,5 +20,71 @@
     "commit" : "e77ca63eaaca0198bdc4dff7dc736d2552c072fd",
     "line" : 13,
     "diffHunk" : "@@ -1,1 +159,163 @@  Double_t _asymErrHi ; // High side of asymmetric error associated with current value\n  std::unique_ptr<RooAbsBinning> _binning;\n  std::unordered_map<std::string,std::unique_ptr<RooAbsBinning>> _altNonSharedBinning ; //! Non-shareable alternative binnings\n\n  std::shared_ptr<RooRealVarSharedProperties> sharedProp() const;"
+  },
+  {
+    "id" : "7a2804cd-31f0-471a-819e-a221f10b10b7",
+    "prId" : 8764,
+    "prUrl" : "https://github.com/root-project/root/pull/8764#pullrequestreview-721018419",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "a00f932c-47c5-4576-ae8d-5b44d75e5ec0",
+        "parentId" : null,
+        "authorId" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "body" : "This is alarming.\r\nWhen did this happen?\r\nDoes it need to be backported?\r\nWhy do you see it only now?\r\n\r\nYou should get this PR merged (nag Axel and everyone who has a failing test under their code ownership about it, I'll rebase it for you):\r\nhttps://github.com/root-project/root/pull/5591",
+        "createdAt" : "2021-08-02T10:08:02Z",
+        "updatedAt" : "2021-08-02T10:08:06Z",
+        "lastEditedBy" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "047549fa-b63b-4b6e-b2f5-8a371f7d7e1b",
+        "parentId" : "a00f932c-47c5-4576-ae8d-5b44d75e5ec0",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "I have no idea why it happened. As you also saw in the other PR, I had the same problem when I changed the RooListProxy and RooSetProxy classes:\r\nhttps://github.com/root-project/root/pull/8728#discussion_r680832877\r\n\r\nI'll ask on Mattermost, maybe one of the I/O experts can help me.",
+        "createdAt" : "2021-08-02T10:18:42Z",
+        "updatedAt" : "2021-08-02T10:18:42Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b9569b2-16b7-4661-bda9-fc1675783914",
+        "parentId" : "a00f932c-47c5-4576-ae8d-5b44d75e5ec0",
+        "authorId" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "body" : "I can explain, actually:\r\n- You presumably changed the pointer member for a `unique_ptr`.\r\n- That's commendable, but schema evolution must be taken care of.\r\n- Since we are never testing whether gtests trigger warnings such as the one above, nobody notices.\r\n\r\nWhat you should do now:\r\n- Find when the change was introduced.\r\n- Make sure that the increment of the class version was backported to released ROOTs if necessary.\r\n- Pressure everybody so #5591 can be merged ASAP.",
+        "createdAt" : "2021-08-02T11:56:27Z",
+        "updatedAt" : "2021-08-02T11:56:27Z",
+        "lastEditedBy" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f6106da6-a1aa-4d03-b20f-f1b8ad1fe475",
+        "parentId" : "a00f932c-47c5-4576-ae8d-5b44d75e5ec0",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Thanks for the input, but this doesn't explain why the warning only appeared now after changing seeminlgy unrealed classes. I master there is no warning, only in master+this PR minus the last commit.\r\n\r\nThe change to `unique_ptr` was introduced by you quite some time ago, going along with incrementing the class version:\r\nhttps://github.com/root-project/root/commit/2ca7f7910f720b748a01dc28ed6d981300a1acc5#diff-6614cb454d92121edef4202ab96f535572bd49cdfdf6aa155b04f9ce41b35ede\r\n\r\nSo I'm still just as confused as before about why the warning only appears now...",
+        "createdAt" : "2021-08-02T23:26:00Z",
+        "updatedAt" : "2021-08-02T23:26:00Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "55d15e76-398e-464b-a636-28c3507dc27c",
+        "parentId" : "a00f932c-47c5-4576-ae8d-5b44d75e5ec0",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "In fact, the changes to `RooAbsArg.h` and `RooAbsArg.cxx` alone are sufficient to trigger the Warning in `testProxiesAndCategories`, which is not present with ROOT master:\r\n```\r\nWarning in <TStreamerInfo::BuildCheck>: \r\n   The StreamerInfo of class RooRealVar read from file categories_v622.root\r\n   has the same version (=7) as the active class but a different checksum.\r\n   You should update the version to ClassDef(RooRealVar,8).\r\n   Do not try to write objects with the current class definition,\r\n   the files will not be readable.\r\n\r\nWarning in <TStreamerInfo::CompareContent>: The following data member of\r\nthe on-file layout version 7 of class 'RooRealVar' differs from \r\nthe in-memory layout version 7:\r\n   RooAbsBinning _binning; //\r\nvs\r\n   unique_ptr<RooAbsBinning,default_delete<RooAbsBinning> > _binning; //\r\n```",
+        "createdAt" : "2021-08-03T10:06:45Z",
+        "updatedAt" : "2021-08-03T10:06:45Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "250ff8f939509ab16787f99a5181ff6cd6bd7aa6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +165,169 @@  std::shared_ptr<RooRealVarSharedProperties> _sharedProp; //! Shared binnings associated with this instance\n\n  ClassDef(RooRealVar,8) // Real-valued variable\n};\n"
   }
 ]

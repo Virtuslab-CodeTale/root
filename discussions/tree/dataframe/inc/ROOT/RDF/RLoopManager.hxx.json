@@ -1,0 +1,57 @@
+[
+  {
+    "id" : "402886b6-42ea-465d-8dd6-85e830068402",
+    "prId" : 8836,
+    "prUrl" : "https://github.com/root-project/root/pull/8836#pullrequestreview-728754770",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c89c807c-c8e4-4b9c-aeaa-8c63948849e3",
+        "parentId" : null,
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "You're sure this work with doxygen? I thought the docstring had to be in the same line after the member declaration?",
+        "createdAt" : "2021-08-12T15:10:31Z",
+        "updatedAt" : "2021-08-12T15:10:31Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c4b58b7-bc3a-44cc-8a40-1531cdab49bb",
+        "parentId" : "c89c807c-c8e4-4b9c-aeaa-8c63948849e3",
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "afaik, line before with `///` or same line with `///<`",
+        "createdAt" : "2021-08-12T15:11:42Z",
+        "updatedAt" : "2021-08-12T15:12:30Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "856c47bd-1f7a-4f7b-b3a1-82805f53eddb",
+        "parentId" : "c89c807c-c8e4-4b9c-aeaa-8c63948849e3",
+        "authorId" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "body" : "yep see e.g. https://root.cern/doc/master/classROOT_1_1Detail_1_1RDF_1_1RLoopManager.html#a4a82e371e7cc9c3c9dc4567f0d0bad76",
+        "createdAt" : "2021-08-12T15:13:35Z",
+        "updatedAt" : "2021-08-12T15:13:35Z",
+        "lastEditedBy" : "f2c15ca6-f995-45d3-a26d-40d002e52d07",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e9398c0-d6b5-49ca-a7fe-5a763bd3ba80",
+        "parentId" : "c89c807c-c8e4-4b9c-aeaa-8c63948849e3",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Ah yes, just like for the functions. Okay then!",
+        "createdAt" : "2021-08-12T15:14:23Z",
+        "updatedAt" : "2021-08-12T15:14:23Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c2887eb3a6e09a3c3e707044ef7bc2b9b9b8fda8",
+    "line" : 104,
+    "diffHunk" : "@@ -1,1 +122,126 @@   std::vector<RDFInternal::ROneTimeCallback> fCallbacksOnce;\n   /// Registered callbacks to call at the beginning of each \"data block\"\n   std::vector<RDFInternal::Callback_t> fDataBlockCallbacks;\n   RDFInternal::RDataBlockNotifier fDataBlockNotifier;\n   unsigned int fNRuns{0}; ///< Number of event loops run"
+  }
+]

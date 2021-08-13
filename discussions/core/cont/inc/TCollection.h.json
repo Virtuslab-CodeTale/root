@@ -174,5 +174,71 @@
     "commit" : "221173a85d2f78a1a61a1b68be3f47f60918bef4",
     "line" : 135,
     "diffHunk" : "@@ -1,1 +340,344 @@} // namespace ROOT\n\n/// @brief TRangeDynCast is an adapter class that allows the typed iteration\n/// through a TCollection.\n///"
+  },
+  {
+    "id" : "3ae131ec-338b-4521-a888-4164ea961753",
+    "prId" : 8769,
+    "prUrl" : "https://github.com/root-project/root/pull/8769#pullrequestreview-723280834",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b795610c-f069-4b2d-b3c5-e01f15a47d0d",
+        "parentId" : null,
+        "authorId" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "body" : "Add doxygen.",
+        "createdAt" : "2021-08-05T08:12:23Z",
+        "updatedAt" : "2021-08-05T08:27:11Z",
+        "lastEditedBy" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "00489013-a97c-45f4-b100-daac7f119ddd",
+        "parentId" : "b795610c-f069-4b2d-b3c5-e01f15a47d0d",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Ok!",
+        "createdAt" : "2021-08-05T12:16:39Z",
+        "updatedAt" : "2021-08-05T12:16:39Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "221173a85d2f78a1a61a1b68be3f47f60918bef4",
+    "line" : 78,
+    "diffHunk" : "@@ -1,1 +308,312 @@namespace Detail {\n\ntemplate <typename T, bool isDynamic>\nclass TRangeCast : public ROOT::RRangeCast<T*, isDynamic, TCollection const&> {\npublic:"
+  },
+  {
+    "id" : "1bba493a-4229-4abf-a04f-f8190284aed6",
+    "prId" : 8769,
+    "prUrl" : "https://github.com/root-project/root/pull/8769#pullrequestreview-723281611",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7b5dca8d-97f2-4cbf-99bf-2b088425bb1b",
+        "parentId" : null,
+        "authorId" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "body" : "Same as above.",
+        "createdAt" : "2021-08-05T08:15:07Z",
+        "updatedAt" : "2021-08-05T08:27:11Z",
+        "lastEditedBy" : "ec1903c5-44e7-4fb1-bee9-25de61836fba",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f1244974-24d2-40cd-ae19-9ef0062f6630",
+        "parentId" : "7b5dca8d-97f2-4cbf-99bf-2b088425bb1b",
+        "authorId" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "body" : "Ok!",
+        "createdAt" : "2021-08-05T12:17:30Z",
+        "updatedAt" : "2021-08-05T12:17:31Z",
+        "lastEditedBy" : "080bddae-e637-45c8-b6c1-53aef7161d62",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "221173a85d2f78a1a61a1b68be3f47f60918bef4",
+    "line" : 135,
+    "diffHunk" : "@@ -1,1 +340,344 @@} // namespace ROOT\n\n/// @brief TRangeDynCast is an adapter class that allows the typed iteration\n/// through a TCollection.\n///"
   }
 ]
